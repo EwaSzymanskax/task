@@ -9,6 +9,7 @@ module.exports = {
       'beige': '#DCC1AB',
       'gray': '#F5F0EC', 
       'green': '#1B5B31',
+      'light-beige': '#F5F0EC',
     },
     fontFamily: {
       'montserrat': ['Montserrat'],
