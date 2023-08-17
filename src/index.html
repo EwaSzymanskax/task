@@ -6,52 +6,167 @@
     <base href="./">
     <link href="../dist/output.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
 
     <title>Document</title>
 </head>
-<body>
-    <div class="font-montserrat bg-white">
+<body class="font-montserrat">
+    <div class="bg-white">
         <header>
             <div class="flex flex-row justify-between">
                 <img class="m-3" src="image/giarddesign.png" alt="logo">
                 <nav>
-                    <img class="m-3 w-5 h-5" src="image/bars-solid (1).svg" alt="menu">
+                    <img class="m-3 w-5 h-5" src="Icons/bars-solid (1).svg" alt="menu">
                     <button type="button" class="hidden">X</button>
                     <ul class="hidden">
                         <li>Oferta</li>
                         <li>O firmie</li>
                         <li>Realizacje</li>
                         <li>Kontakt</li>
-                        <li><img src="image/Icon 01.png"></li>
+                        <li><img src="Icons/IconSearch.png"></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <main>
-            <div class="bg-beige text-center">
+        <section class=" bg-beige">
+            <div class="text-center">
                 <div>
-                    <section>
-                        <h1 class="flex font-medium text-2xl mt-2 mb-3">Nowoczesna aranżacja Twojego ogrodu</h1>
-                        <p class="text-sm mt-3">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
-                    </section>
-                    <div class="flex flex-col justify-center">
-                        <button type="button" class="m-6 w-3/5 bg-green rounded-full text-xs px-3 pt-1.5 pb-2">Skontaktuj się z nami</button>
-                        <button type="button" class="flex flex-row mb-5  w-3/5 border border-green rounded-full text-xs px-3 pt-1.5 pb-2">Zobacz nasze realizacje<img  class="w-3.5 h-3.5 text-green ml-2 m"src="image/Vector.png" alt="vector">
+                    <div>
+                        <h1 class="flex font-medium text-2xl pt-5 mb-10">Nowoczesna aranżacja Twojego ogrodu</h1>
+                        <p class="text-sm mt-3 mx-5">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
+                    </div>
+                    <div class="flex flex-col mx-auto place-items-center">
+                        <button type="button" class="m-6 w-52 h-12 bg-green rounded-full text-base px-3 pt-1.5 pb-2 text-light-beige">Skontaktuj się z nami</button>
+                        <button type="button" class="flex flex-row mb-5  w-64 h-12 border border-green rounded-full text-base place-content-center text-green pt-3 pb-3.5">Zobacz nasze realizacje<img class="w-4 h-4 text-green pl-1 mt-1"src="Icons/VectorDown.png" alt="vector">
                         </button>
                     </div>
                 </div>
             </div>
-            <section >
-                <div class="flex flex-col bg-beige">
-                   <img class="relative w-3/4 mb-4 bg-beige" src="image/Garden.png" alt="garden">
-                    <button class="absolute w-11 h-11 bg-light-beige bottom-7 left-10"><img src="image/Frame 2310.png" alt="arrow right"></button>
-                    <button class="absolute w-11 h-11 bg-light-beige bottom-7 left-0"><img src="image/Frame 2311.png" alt="arrow left"></button> 
+            <div>
+                <div class="flex flex-col mx-auto place-items-center relative">
+                   <img class="w-52 mb-3 bg-beige place-items-center" src="image/Garden.png" alt="ogród">
+                    <div class="absolute bottom-3">
+                        <button class="w-11 h-11 bg-light-beige float-left -mr-1"><img class="w-12 h-12" src="Icons/Frame 2311.png" alt="arrow left"></button> 
+                        <button class="w-11 h-11 bg-light-beige float-left "><img class="w-12 h-12"src="Icons/Frame 2310.png" alt="arow right"></button>
+                    </div>
                 </div>
                 </div>
                 
-            </section>
+            </div>
 
-        </main>
+        </section>
     </div>
+    <div class="bg-light-beige">
+        <div>
+            <h1 class="text-xl text-green pt-5 ml-5">Oferta</h1>
+            <h2 class="text-3xl font-medium italic mt-5 mx-5">Działamy kompleksowo</h2>
+            <p class="m-5 mt-5 mb-5">Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.</p>
+        </div>   
+        <div class="flex flex-col place-items-center space-y-3">
+            <div class=" border-1 rounded-lg bg-white w-80 h-80">
+                <img class="w-11 h-11 mt-8 ml-10 mb-8" src="Icons/Pen.png" alt="ołówek">
+                <h3 class="text-2xl font-medium mb-3 mx-10">Projekty</h3>
+                <p class="text-sm mx-10">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
+                <button class="flex flex-row text-green mx-10 mt-5 mb-12 text-base border-b border-green">Dowiedz się więcej <img class="w-4 h-4 ml-2 mt-1"src="Icons/VectorRight.png" alt="strzałka"></button>
+            </div>
+            <div class="border-1 rounded-lg bg-white w-80 h-80">
+                <img class="w-12 h-11 mt-8 ml-10 mb-8" src="Icons/Eye.png" alt="oko">
+                <h3 class="text-2xl font-medium mb-3 mx-10">Wizualizacje</h3>
+                <p class="text-sm mx-10">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
+                <button class="flex flex-row text-green mx-10 mt-5 mb-12 text-base border-b border-green">Dowiedz się więcej <img class="w-4 h-4 ml-2 mt-1" src="Icons/VectorRight.png" alt="strzałka"></button>
+            </div>
+            <div class="border-1 rounded-lg bg-white w-80 h-80">
+                <img class="w-11 h-11 mt-8 ml-10 mb-8" src="Icons/Stars.png" alt="gwiazdy">
+                <h3 class="text-2xl font-medium mb-3 mx-10">Realizacje</h3>
+                <p class="text-sm mx-10">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
+                <button class="flex flex-row text-green mx-10 mt-5 mb-12 text-base border-b border-green">Dowiedz się więcej <img class="w-4 h-4 ml-2 mt-1" src="Icons/VectorRight.png" alt="strzałka"></button>
+            </div>
+        </div>
+        <div>
+            <img class="pt-5 w-full" src="image/House.png">
+            <div class="text-white bg-green pb-5">
+                <h1 class="text-xl  pt-10 mx-5">O firmie</h1>
+                <h2 class="font-medium text-3xl mt-5 mx-5">Tworzymy z pasją</h2>
+                <p class="text-sm mt-5 mx-5">Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.</p>
+                <button class="flex flex-row mt-16 mx-5  mb-6 w-48 h-12 border border-white rounded-full text-base place-content-center pt-3">Poznaj nas bliżej<img class="w-4 h-4 pl-1 mt-1" src="Icons/VectorWhite.png" alt="strzałka"></button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="pt-5 bg-beige">
+            <header>
+                <h1 class="text-xl pt-10 mx-5 text-green">Realizacje</h1>
+                <h2 class="font-medium text-3xl mt-5 mx-5 mb-24 italic">Nasze projekty</h2>
+            </header>
+            <div>
+                <div class="grid" data-masonry='{ "itemSelector": ".grid-item"}'>
+                    <div class="grid-item w-2/6 mb-6"><img src="image/projects/Photo (3).png"></div>
+                    <div class="grid-item w-2/6 mb-6"><img src="image/projects/Photo (4).png"></div>
+                    <div class="grid-item w-2/6 mb-6"><img src="image/projects/Photo (5).png"></div>
+                    <div class="grid-item  w-2/6 mb-6"><img src="image/projects/Photo (7).png"></div>
+                    <div class="grid-item  w-2/6 mb-6"><img src="image/projects/Photo (8).png"></div>
+                    <div class="grid-item  w-2/6 mb-6"><img src="image/projects/Photo (6).png"></div>
+                    <div class="grid-item  w-2/6 mb-6"><img src="image/projects/Photo (10).png"></div>
+                    <div class="grid-item  w-2/6 mb-6"><img src="image/projects/Photo (9).png"></div>
+                    <div class="grid-item  w-2/6 mb-6"><img src="image/projects/Photo (11).png"></div>
+                  </div>
+                  <div class="":after high:></div>
+                <div class="flex flex-column mx-auto place-items-center">
+                    <button class="flex flex-row mx-auto mt-16 mb-6 w-32 h-12 border border-black rounded-full text-base place-content-center pt-3">Rozwiń <img class="w-4 h-4 pl-1 mt-1" src="Icons/VectorBlack.png" alt="strzałka"></button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="flex flex-col place-items-center bg-light-beige pt-16 pb-16">
+                <section class="flex flex-col bg-green w-80">
+                    <div class="text-light-beige text-4xl ml-5 mt-5 mb-5">
+                        <p class="mb-3">Zostańmy w kontakcie!</p>
+                        <p>Znajdziesz nas na <i class="font-medium">Instagramie.</i></p>
+                    </div>
+                    <div>
+                        <p class="text-base text-light-beige ml-5 mb-5 mt-5">Śledź nasze najnowsze realizacje!</p>
+                        <div class="flex flex-col place-items-center">
+                            <button class="m-6 w-52 h-12 bg-light-beige rounded-full text-base px-3 pt-1.5 pb-2 text-green">Instagram</button></button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer>
+            <div class="bg-black">
+                <div class=" text-light-beige pt-5">
+                    <img class="ml-5 mb-5 w-28 h-5 "src="Icons/giarddesign.png">
+                    <div>
+                        <p class="text-sm ml-5 mb-10">Daj znać, co możemy dla Ciebie zrobić!</p>
+                        <div class="flex flex-col place-items-center">
+                            <button class="m-6 w-52 h-12 bg-green rounded-full text-base px-3 pt-1.5 pb-2 text-light-beige">Skontaktuj się z nami</button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="text-light-beige mx-5 mb-5 mt-10">
+                    <div>
+                        <ol class="text-sm flex flex-row place-content-between">
+                            <li>Kontakt</li>
+                            <li>Instagram</li>
+                            <li>Facebook</li>
+                            <li>LinkedIn</li>
+                        </ol>
+                    </div>
+                    <div class="flex flex-row place-content-between">
+                        <p class="text-sm mt-10">000-000-000</p>
+                        <p class="text-sm mt-10">giarddesign@kontakt.pl</p>
+                    </div>
+                </div>
+                <div class="flex flex-row text-sm text-light-beige place-content-between mt-20">
+                    <p class="ml-5">Prawa zastrzeżone © 2022</p>
+                    <p class="mr-5">made by<img class="w-28 h-6 mb-5" src="Icons/Group 129.png"></p>
+                </div>
+            </div>
+        </footer>
+       
+
+    </div>
+    <script src="mansory.js"></script>
 </body>
 </html>

@@ -10,6 +10,8 @@ module.exports = {
       'gray': '#F5F0EC', 
       'green': '#1B5B31',
       'light-beige': '#F5F0EC',
+      'white': '#FFFFFF',
+      'black': '#111111',
     },
     fontFamily: {
       'montserrat': ['Montserrat'],
