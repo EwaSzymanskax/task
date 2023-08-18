@@ -18,25 +18,27 @@
                 <nav>
                     <img class="m-3 w-5 h-5 lg:hidden" src="Icons/bars-solid (1).svg" alt="menu">
                     <button type="button" class="hidden">X</button>
-                    <ul class="hidden lg:flex lg:text-sm lg:mr-20 lg:mt-5 lg:mb-5 lg:w-96 lg:h-6 space-x-8">
+                    <ul class="hidden lg:flex lg:text-sm lg:mr-14 xl:mr-20 lg:mt-5 lg:mb-5 lg:w-96 lg:h-6 space-x-8">
                         <li class="text-sm text-black">Oferta</li>
                         <li class="text-sm text-black">O firmie</li>
                         <li class="text-sm text-black">Realizacje</li>
                         <li class="text-sm text-black">Kontakt</li>
-                        <li class="w-5 h-5"><img src="Icons/IconSearch.png"></li>
+                        <li class="w-5 h-5"><img id="search" src="Icons/IconSearch.png"></li>
                     </ul>
+                    <input id="input" value="Szukaj..." class="hidden border-black border-2 h-10 mb-5">
+                    <button type="button" id="closeButton" class="hidden ml-3 text-black text-xl ">X</button>
                 </nav>
             </div>
         </header>
         <section class=" bg-beige lg:flex lg:flex-row">
-            <div class="text-center lg:text-start lg:mr-16">
+            <div class="text-center lg:text-start  lg:mr-8 xl:mr-16">
                 <div>
                     <div>
-                        <h1 class="flex font-medium text-2xl pt-5 mb-10 lg:text-6xl lg:ml-20 ml-5 lg:mb-11 lg:mt-40 lg:w-[590px]">Nowoczesna aranżacja <br>Twojego ogrodu</h1>
+                        <h1 class="flex font-medium text-2xl pt-5 mb-10 lg:text-6xl lg:ml-20 ml-5 lg:mb-11 lg:mt-40 xl:w-[590px]">Nowoczesna aranżacja <br>Twojego ogrodu</h1>
                         <p class="text-sm mt-3 mx-5 lg:text-base lg:ml-20 lg:mb-2.5 lg:w-[490px]">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
                     </div>
                     <div class="flex flex-col mx-auto place-items-center lg:place-items-start lg:flex-row">
-                        <button type="button" class="m-6 w-52 h-12 bg-green rounded-full text-base px-3 pt-1.5 pb-2 text-light-beige lg:mt-16 lg:ml-20">Skontaktuj się z nami</button>
+                        <button type="button" class="m-6 w-52 h-12 bg-green rounded-full text-base px-3 pt-1.5 pb-2 text-light-beige lg:mt-16 lg:ml-20 lg:mb-35">Skontaktuj się z nami</button>
                         <button type="button" class="flex flex-row mb-5  w-64 h-12 border border-green rounded-full text-base place-content-center text-green pt-3 pb-3.5 lg:mt-16">Zobacz nasze realizacje<img class="w-4 h-4 text-green pl-1 mt-1"src="Icons/VectorDown.png" alt="vector">
                         </button>
                     </div>
@@ -44,7 +46,7 @@
             </div>
             <div>
                 <div class="flex flex-col mx-auto place-items-center lg:place-items-end relative">
-                   <img class="w-52 mb-3 bg-beige place-items-center lg:w-[688px] lg:mb-0" src="image/Garden.png" alt="ogród">
+                   <img class="w-52 mb-3 bg-beige place-items-center lg:w-full xl:w-[688px] lg:mb-0" src="image/Garden.png" alt="ogród">
                     <div class="absolute bottom-3 lg:bottom-0">
                         <button class="w-11 h-11 bg-light-beige float-left -mr-1 lg:w-24 lg:h-24 "><img class="w-12 h-12 lg:ml-5" src="Icons/Frame 2311.png" alt="arrow left"></button> 
                         <button class="w-11 h-11 bg-light-beige float-left lg:w-24 lg:h-24"><img class="w-12 h-12 lg:ml-5"src="Icons/Frame 2310.png" alt="arow right"></button>
@@ -62,20 +64,20 @@
             <h2 class="text-3xl font-medium italic mt-5 mx-5">Działamy kompleksowo</h2>
             <p class="m-5 mt-5 mb-5 lg:mb-24 text-base">Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.</p>
         </div>   
-        <div class="flex flex-col place-items-center space-y-3 lg:flex-row lg:mb-40 lg:space-y-0">
-            <div class=" border-1 rounded-lg bg-white w-80 h-80  lg:w-[378px] lg:h-[370px]">
+        <div class="flex flex-col place-items-center space-y-3 lg:flex-row lg:mb-40 lg:space-y-0 ">
+            <div class=" border-1 rounded-lg bg-white w-80 h-80 xl:w-[378px] xl:h-[370px] lg:mr-4 xl:mr-16">
                 <img class="w-11 h-11 mt-8 ml-10 mb-8" src="Icons/Pen.png" alt="ołówek">
                 <h3 class="text-2xl font-medium mb-3 mx-10">Projekty</h3>
                 <p class="text-sm mx-10">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
                 <button class="flex flex-row text-green mx-10 mt-5 mb-12 text-base border-b border-green">Dowiedz się więcej <img class="w-4 h-4 ml-2 mt-1"src="Icons/VectorRight.png" alt="strzałka"></button>
             </div>
-            <div class="border-1 rounded-lg bg-white w-80 h-80 lg:w-[378px] lg:h-[370px]">
+            <div class="border-1 rounded-lg bg-white w-80 h-80 xl:w-[378px] xl:h-[370px] lg:mr-4 xl:mr-16">
                 <img class="w-12 h-11 mt-8 ml-10 mb-8" src="Icons/Eye.png" alt="oko">
                 <h3 class="text-2xl font-medium mb-3 mx-10">Wizualizacje</h3>
                 <p class="text-sm mx-10">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
                 <button class="flex flex-row text-green mx-10 mt-5 mb-12 text-base border-b border-green">Dowiedz się więcej <img class="w-4 h-4 ml-2 mt-1" src="Icons/VectorRight.png" alt="strzałka"></button>
             </div>
-            <div class="border-1 rounded-lg bg-white w-80 h-80 lg:w-[378px] lg:h-[370px]">
+            <div class="border-1 rounded-lg bg-white w-80 h-80 xl:w-[378px] xl:h-[370px]">
                 <img class="w-11 h-11 mt-8 ml-10 mb-8" src="Icons/Stars.png" alt="gwiazdy">
                 <h3 class="text-2xl font-medium mb-3 mx-10">Realizacje</h3>
                 <p class="text-sm mx-10">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
@@ -118,12 +120,12 @@
         </div>
         <div>
             <div class="flex flex-col place-items-center bg-light-beige pt-16 pb-16">
-                <section class="flex flex-col bg-green w-80 lg:flex-row lg:w-[1040px]">
-                    <div class="text-light-beige text-4xl ml-5 mt-5 mb-5 lg:mt-[120px] lg:mb-[120px] lg:ml-[110px] lg:mr-[64px] lg:text-[40px]">
+                <section class="flex flex-col bg-green w-80 lg:flex-row lg:w-[800px] xl:w-[1040px]">
+                    <div class="text-light-beige text-4xl ml-5 mt-5 mb-5 lg:mt-[120px] lg:mb-[120px] lg:ml-20 xl:ml-[110px] lg:mr-8 xl:mr-[64px] lg:text-[40px]">
                         <p>Zostańmy w kontakcie!</p>
                         <p>Znajdziesz nas na <i class="font-medium">Instagramie.</i></p>
                     </div>
-                    <div class="lg:mr-[110px]">
+                    <div class=" lg:mr-20 xl:mr-[110px]">
                         <p class="text-base text-light-beige ml-5 mb-5 mt-5 lg:mt-[120px] lg:mx-0 lg:mb-0">Śledź nasze najnowsze realizacje!</p>
                         <div class="flex flex-col place-items-center lg:place-items-start">
                             <button class="m-6 w-52 h-12 bg-light-beige rounded-full text-base px-3 pt-1.5 pb-2 text-green lg:mb-[120px] lg:w-[124px] lg:mx-0 lg:px-0">Instagram</button></button>
@@ -133,9 +135,9 @@
             </div>
         </div>
         <footer class="bg-black lg:flex lg:flex-col lg:place-items-center">
-            <div class="lg:w-[1040px]">
+            <div class=" lg:w-[800px] xl:w-[1040px]">
                 <div class=" text-light-beige pt-5 lg:flex lg:flex-row lg: place-content-between lg:pt-20 lg:mb-[62px]">
-                    <img class="ml-5 mb-5 w-28 h-5 "src="Icons/giarddesign.png">
+                    <img class="ml-5 mb-5 w-28 h-5 lg:ml-0"src="Icons/giarddesign.png">
                     <div class="lg:flex lg:flex-row">
                         <p class="text-sm ml-5 mb-10 lg:mr-3">Daj znać, co możemy dla Ciebie zrobić!</p>
                         <div class="flex flex-col place-items-center">
@@ -144,29 +146,31 @@
                     </div>
                 </div>
                 <img src="Icons/Line.png">
-                <div class="text-light-beige mx-5 mb-5 mt-10 lg:mb-[62px] lg:flex lg: flex-row place-content-between">
+                <div class="text-light-beige mx-5 mb-5 mt-10 lg:flex lg: flex-row place-content-between lg:mx-0">
                     <div>
-                        <ol class="text-sm flex flex-row place-content-between">
+                        <ol class="text-sm flex flex-row place-content-between lg:mt-[62px]">
                             <li>Kontakt</li>
-                            <li>Instagram</li>
-                            <li>Facebook</li>
-                            <li>LinkedIn</li>
+                            <li class="lg:ml-8">Instagram</li>
+                            <li class="lg:ml-8">Facebook</li>
+                            <li class="lg:ml-8">LinkedIn</li>
                         </ol>
                     </div>
-                    <div class="flex flex-row place-content-between">
-                        <p class="text-sm mt-10">000-000-000</p>
-                        <p class="text-sm mt-10">giarddesign@kontakt.pl</p>
+                    <div class="flex flex-row place-content-between lg:mt-[62px]">
+                        <p class="text-sm mt-10 lg:mr-8 lg:mt-0">000-000-000</p>
+                        <p class="text-sm mt-10 lg:mt-0">giarddesign@kontakt.pl</p>
                     </div>
                 </div>
-                <div class="flex flex-row text-sm text-light-beige place-content-between mt-20">
-                    <p class="ml-5">Prawa zastrzeżone © 2022</p>
-                    <p class="mr-5">made by<img class="w-28 h-6 mb-5" src="Icons/Group 129.png"></p>
+                <div class="flex flex-row text-sm text-light-beige place-content-between mt-20 lg:mb-20">
+                    <p class="ml-5 lg:ml-0 lg:mt-[62px]">Prawa zastrzeżone © 2022</p>
+                    <p class="mr-5 lg:flex lg:flex-row lg:mt-[62px] lg:mr-5 ">made by<img class="w-28 h-6 mb-5" src="Icons/Group 129.png"></p>
                 </div>
+
             </div>
         </footer>
        
 
     </div>
     <script src="mansory.js"></script>
+    <script src="nav.js"></script>
 </body>
 </html>
