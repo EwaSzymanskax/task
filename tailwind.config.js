@@ -21,8 +21,10 @@ module.exports = {
       'interItal': ['InterItal', 'sans-serif'],
   },
     extend: { 
+      transitionProperty: {
+        'height': 'height',
     },
   },
   plugins: [],
 }
-
+}

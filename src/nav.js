@@ -15,3 +15,4 @@ search.addEventListener("click",searching),
 closeButton.addEventListener("click", closeInput)
 
 
+

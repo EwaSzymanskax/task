@@ -13,8 +13,8 @@
 // //   // options...
 // });
 
-var msnry = new Masonry( '.grid', {
-  itemSelector: '.grid-item',
-  gutter: 10,
-});
+// var msnry = new Masonry( '.grid', {
+//   itemSelector: '.grid-item',
+//   gutter: 10,
+// });
 
