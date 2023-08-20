@@ -17,7 +17,7 @@ module.exports = {
       'montserrat': ['Montserrat'],
       'lato': ['Lato'],
       'garamond': ['Garamond'],
-      'inter': ['Inter', 'sans-serif'],
+      'inter': ['Inter'],
       'interItal': ['InterItal', 'sans-serif'],
   },
     extend: { 

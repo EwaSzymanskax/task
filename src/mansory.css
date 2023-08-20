@@ -1,6 +1,6 @@
-
 .grid-item {
-  width: 467px;
+  width: 370px;
+  
 
 }
 
@@ -13,4 +13,11 @@
 .grid {
   margin: 0 auto;
 
+}
+
+@media (min-width: 1024px){
+  .grid-item {
+    width: 467px;
+  
+  }
 }
