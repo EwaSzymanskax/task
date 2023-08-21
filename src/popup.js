@@ -3,7 +3,6 @@ const popup = document.getElementbyId('popup');
 
 const popupVisib=()=>{
     popup.style.display = "inline"; 
-    console.log('la')
 }
 
 

@@ -1,4 +1,4 @@
-var lightbox = new PhotoSwipeLightbox({
+const lightbox = new PhotoSwipeLightbox({
     gallery: '.gallery',
     children: 'a',
     pswpModule: PhotoSwipe 

@@ -17,7 +17,15 @@
 @media (min-width: 1024px){
   .grid-item {
     width: 467px;
-    margin-left: auto
+    margin-left: 25px;
   
+  }
+
+  @media (min-width: 1440px){
+    .grid-item {
+      width: 467px;
+      margin-left: auto;
+    
+    }
   }
 }

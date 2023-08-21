@@ -15,9 +15,9 @@ document.addEventListener("alpine:init", () => {
       src:"image/Garden.png",
 
       },
-      {title: "Działamy kompleksowo", 
+      {title: "Działamy kompleksowo i tworzymy z pasją", 
       description:'Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.',
-      src:"image/House.png",
+      src:"image/House@2x.png",
       },
     ],
 
@@ -33,37 +33,3 @@ document.addEventListener("alpine:init", () => {
     },
   }));
 });
-
-
-
-// const slideOut=()=>{
-//     if (screen.width > 1024) {
-//     imgMove.style.marginRight = '900px'
-//     // imgMove.classList.remove('translate-x-50')
-//     imgMove.classList.toggle('translate-x-50')
-//     if (slideDiv.style.display === "none") {
-//         slideDiv.style.display = "block";
-//       } else {
-//         slideDiv.style.display = "none";
-//       }
-//     slideDiv.style.marginRight = '300px';
-//     }
-
-
-// }
-// const slideIn=()=>{
-//     if (screen.width > 1024) {
-//     imgMove.style.marginLeft = '0px';
-//     imgMove.classList.add('translate-x-full');
-//     if (slideDiv.style.display === "none") {
-//         slideDiv.style.display = "block";
-//       } else {
-//         slideDiv.style.display = "none";
-//       }
-//     }
-
-
-// }
-
-// btnLeft.addEventListener('click',slideOut);
-// btnRight.addEventListener('click',slideIn);

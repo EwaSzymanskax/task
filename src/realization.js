@@ -25,12 +25,11 @@ const addProjects=()=> {
   msnry.layout();
 
   }
-const imgArr= ["image/projects/Photo (10).png", "image/projects/Photo (7).png", "image/projects/Photo (3).png"]
+const imgArr= ["image/projects/Photo (8).png", "image/projects/Photo (10).png", "image/projects/Photo (3).png"]
 
   function getItemElement(i) {
     const elem = document.createElement('div');
     elem.classList.add("grid-item");
-    elem.classList.add("test");
     blurDiv.style.display = 'none';
     addButton.style.display = 'none';
 
@@ -38,7 +37,6 @@ const imgArr= ["image/projects/Photo (10).png", "image/projects/Photo (7).png", 
     img.src= imgArr[i]
     elem.appendChild(img);
  
-
     return elem;
 
     
