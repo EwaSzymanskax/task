@@ -13,14 +13,12 @@ module.exports = {
       'white': '#FFFFFF',
       'black': '#111111',
     },
-    fontFamily: {
-      'montserrat': ['Montserrat'],
-      'lato': ['Lato'],
-      'garamond': ['Garamond'],
-      'inter': ['Inter'],
-      'interItal': ['InterItal', 'sans-serif'],
-  },
+    
     extend: { 
+      fontFamily: {
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
+    },
       transitionProperty: {
         'height': 'height',
     },

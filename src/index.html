@@ -6,15 +6,13 @@
     <base href="./">
     <link href="../dist/output.css" rel="stylesheet">
     <link href="./mansory.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <link rel="stylesheet" href="./photoswipe.css">
+    
+
     <title>Document</title>
 </head>
 <body class="font-inter">
-    <div class="bg-white">
+    <div class="bg-white"></div>
         <header>
             <div class="flex flex-row justify-between">
                 <img class="m-3 w-28 h-5 lg:ml-20 lg:mt-5 lg:mb-5" src="image/giarddesign.png" alt="logo">
@@ -31,43 +29,59 @@
                         <li class="text-sm text-black">Realizacje</li>
                         <li class="text-sm text-black">Kontakt</li>
                         <li class="hidden" id="input">
-                        <input  value="Szukaj..." class="border-black border-2 h-8 mb-5 pl-1">
+                        <input  value="Szukaj..." class="border-black border-2 h-8 mb-5 pl-1 duration-500 ease-out transition-all">
                         <button type="button" id="closeButton" class=" ml-3 text-black text-xl ">X</button></li>
                         <li class="w-5 h-5"><img id="search" src="Icons/IconSearch.png"></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <section class=" bg-beige lg:flex lg:flex-row items-center">
-            <div class=" h-min text-center lg:text-start lg:mr-8 xl:mr-16">
-                <div class="flex flex-col place-content-center">
-                    <h1 class="flex font-montserrat font-medium text-2xl pt-5 mb-10 lg:text-6xl lg:ml-20 mx-auto lg:mb-11 xl:w-[590px]">Nowoczesna aranżacja <br>Twojego ogrodu</h1>
-                    <p class="text-sm mt-3 mx-5 lg:text-base lg:ml-20 lg:mb-2.5 lg:w-[490px]">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
+        <section  x-data="imageSlider" id="slide-container" class=" bg-beige lg:flex lg:flex-row items-center relative">
+            <!-- <template x-for="(image, index) in images">
+                <div x-show="currentIndex == index + 1" x-transition:enter="transition transform duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute top-0">
+                    <div x-text='image.title'></div>
+                    <img :src="image.src" alt="image" class="rounded-sm" />
                 </div>
-                <div class="flex flex-col mx-auto place-items-center lg:place-items-start lg:flex-row ">
-                    <button type="button" class="m-6 w-52 h-12 bg-green rounded-full text-base px-3 pt-1.5 pb-2 text-light-beige lg:mt-16 lg:ml-20">Skontaktuj się z nami</button>
-                    <button  type="button" class="flex flex-row mb-5  w-64 h-12 border border-green rounded-full text-base place-content-center text-green pt-3 pb-3.5 lg:mt-16">Zobacz nasze realizacje<img class="w-4 h-4 text-green pl-1 mt-1"src="Icons/VectorDown.png" alt="vector">
-                    </button>
+            </template>
+         -->
+         <div class="min-h-[737px]">
+            <template x-for="(slide, index) in slides">
+                <div x-show="currentIndex == index + 1" x-transition:enter="transition transform duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute flex flex-col lg:flex-row top-0">
+                <div class=" h-min text-center lg:text-start lg:mr-8 xl:mr-16">
+                    <div class="flex flex-col place-content-center">
+                        <h1 class="flex font-montserrat font-medium text-2xl pt-5 mb-10 lg:text-6xl lg:ml-20 mx-auto lg:mb-11 xl:w-[590px]" x-text="slide.title"></h1>
+                        <p class="text-sm mt-3 mx-5 lg:text-base lg:ml-20 lg:mb-2.5 lg:w-[490px]" x-text="slide.description"></p>
+                    </div>
+                    <div class="flex flex-col mx-auto place-items-center lg:place-items-start lg:flex-row ">
+                        <button type="button" class="m-6 w-52 h-12 bg-green rounded-full text-base px-3 pt-1.5 pb-2 text-light-beige lg:mt-16 lg:ml-20">Skontaktuj się z nami</button>
+                        <button type="button" class="flex flex-row mb-5  w-64 h-12 border border-green rounded-full text-base place-content-center text-green pt-3 pb-3.5 lg:mt-16">Zobacz nasze realizacje<img class="w-4 h-4 text-green pl-1 mt-1"src="Icons/VectorDown.png" alt="vector">
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div id="slide-container" class="flex flex-col mx-auto place-items-center lg:place-items-end relative z-1">
-                   <img  id="imgMove" class="w-52 mb-3 bg-beige place-items-center lg:w-full xl:w-[688px] lg:mb-0 z-1 duration-500 ease-out transition-all" src="image/Garden.png" alt="ogród">
-                    <div class="absolute bottom-3 lg:-bottom-1">
-                        <button id="btnLeft"  class="w-11 h-11 bg-light-beige float-left -mr-1 lg:w-24 lg:h-24 "><img class="w-12 h-12 lg:ml-5" src="Icons/Frame 2311.png" alt="arrow left"></button> 
-                        <button  id="btnRight" class="w-11 h-11 bg-light-beige float-left lg:w-24 lg:h-24"><img class="w-12 h-12 lg:ml-5"src="Icons/Frame 2310.png" alt="arow right"></button>
+                <div>
+                    <div class="flex flex-col mx-auto place-items-center lg:place-items-end  z-1">
+                    <img  id="imgMove" class="w-52 mb-3 bg-beige place-items-center lg:w-full xl:w-[688px] lg:mb-0 z-1 duration-500 ease-out transition-all overflow-hidden" :src="slide.src" alt="ogród">
+                    </div>
                     </div>
                 </div>
                 </div>
-                
+            </template>
+        </div>
+            <div class="absolute bottom-[133px] right-1/2 translate-x-1/2  lg:-bottom-1 lg:right-6">
+                <button  @click="previous()" id="btnLeft" class="w-11 h-11 bg-light-beige float-left -mr-1 lg:w-24 lg:h-24 "><img class="w-12 h-12 lg:ml-5" src="Icons/Frame 2311.png" alt="arrow left"></button> 
+                <button   @click="forward()" id="btnRight" class=" w-11 h-11 bg-light-beige float-left lg:w-24 lg:h-24"><img class="w-12 h-12 lg:ml-5"src="Icons/Frame 2310.png" alt="arow right"></button>
+            </div>
+            <div id="slideDiv" class="hidden absolute mt-[350px] duration-500 ease-out transition-all">
+                <p class="text-2xl mx-10 lg:w-[490px]">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
             </div>
 
         </section>
+
     </div>
     <div class="bg-light-beige lg:pt-[120px] lg:flex lg:flex-col lg:place-items-center">
         <div class="lg:w-[700px]">
             <h1 class="text-xl text-green pt-5 ml-5">Oferta</h1>
-            <h2 class="text-3xl font-montserrat mt-5 mx-5">Działamy <span class="font-interItal">kompleksowo</span></h2>
+            <h2 class="text-3xl font-montserrat font-medium mt-5 mx-5">Działamy <span class="italic font-inter font-medium">kompleksowo</span></h2>
             <p class="m-5 mt-5 mb-5 lg:mb-24 text-sm">Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.</p>
         </div>   
         <div class="flex flex-col place-items-center space-y-3 lg:flex-row lg:mb-40 lg:space-y-0 ">
@@ -75,21 +89,21 @@
                 <img class="w-11 h-11 mt-8 ml-10 mb-8" src="Icons/Pen.png" alt="ołówek">
                 <h3 class="text-2xl font-montserrat font-medium mb-3 mx-10">Projekty</h3>
                 <p class="text-sm mx-10">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
-                <a href="index.html">
+                <a href="">
                 <button class="flex flex-row text-green mx-10 mt-5 mb-12 text-base border-b border-green">Dowiedz się więcej <img class="w-4 h-4 ml-2 mt-1"src="Icons/VectorRight.png" alt="strzałka"></button></a>
             </div>
             <div class="border-1 rounded-lg bg-white w-80 h-80 xl:w-[378px] xl:h-[370px] lg:mr-4 xl:mr-16 transition transform hover:-translate-y-3  motion-reduce:transition-none motion-reduce:hover:transform-none">
                 <img class="w-12 h-11 mt-8 ml-10 mb-8" src="Icons/Eye.png" alt="oko">
                 <h3 class="text-2xl font-montserrat font-medium mb-3 mx-10">Wizualizacje</h3>
                 <p class="text-sm mx-10">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
-                <a href="index.html">
+                <a href="">
                 <button class="flex flex-row text-green mx-10 mt-5 mb-12 text-base border-b border-green">Dowiedz się więcej <img class="w-4 h-4 ml-2 mt-1" src="Icons/VectorRight.png" alt="strzałka"></button></a>
             </div>
             <div class="border-1 rounded-lg bg-white w-80 h-80 xl:w-[378px] xl:h-[370px] lg:mr-4 xl:mr-16 transition transform hover:-translate-y-3  motion-reduce:transition-none motion-reduce:hover:transform-none">
                 <img class="w-11 h-11 mt-8 ml-10 mb-8" src="Icons/Stars.png" alt="gwiazdy">
                 <h3 class="text-2xl font-montserrat font-medium mb-3 mx-10">Realizacje</h3>
                 <p class="text-sm mx-10">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
-                <a href="index.html">
+                <a href="">
                 <button class="flex flex-row text-green mx-10 mt-5 mb-12 text-base border-b border-green">Dowiedz się więcej <img class="w-4 h-4 ml-2 mt-1" src="Icons/VectorRight.png" alt="strzałka"></button></a>
             </div>
         </div>
@@ -98,9 +112,9 @@
             <div class=" bg-green lg:pl-16 lg:w-1/2 xl:w-full">
                 <div class="text-white pb-5 mx-5  lg:ml-8 xl:ml-24 lg:flex lg:flex-col">
                     <h1 class="text-xl pt-10 lg:text-xs lg:pt-40">O firmie</h1>
-                    <h2 class=" font-montserrat font-medium text-3xl mt-5 lg:mx-0 lg:text-5xl lg:mt-4">Tworzymy z <span class="font-interItal">pasją</span></h2>
-                    <p class="text-sm mt-5 lg:text-base lg:mt-10 xl:w-[500px]">Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.</p>
-                    <button class="flex flex-row mt-16 mb-6 w-48 h-12 border border-white rounded-full text-base place-content-center pt-3 lg:w-[190px] lg:h-[50px] lg:mt-[72px]">Poznaj nas bliżej<img class="w-4 h-4 pl-1 mt-1" src="Icons/VectorWhite.png" alt="strzałka"></button>
+                    <h2 class=" font-montserrat font-medium text-3xl mt-5 lg:mx-0 lg:text-5xl lg:mt-4 xl:w-[200px]">Tworzymy z <span class="font-inter font-medium italic">pasją</span></h2>
+                    <p class="text-sm mt-5 lg:text-base lg:mt-10 font-inter font-normal xl:w-[500px]">Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.</p>
+                    <button class="flex flex-row mt-16 mb-6 w-48 h-12 border border-white rounded-full text-base place-content-center pt-3 lg:w-[190px] lg:h-[50px] lg:mt-[72px] font-inter font-light">Poznaj nas bliżej<img class="h-4 pl-1 mt-1 ml-1" src="Icons/VectorWhite.png" alt="strzałka"></button>
                 </div>
             </div>
         </div>
@@ -109,20 +123,20 @@
         <div class="pt-5 bg-beige">
             <header>
                 <h1 class="text-xl pt-10 mx-5 text-green lg:text-xs lg:ml-52">Realizacje</h1>
-                <h2 class=" font-montserrat font-medium text-3xl mt-5 mx-5 mb-24 italic lg:text-5xl lg:ml-52">Nasze <span class="font-interItal">projekty</span></h2>
+                <h2 class=" font-montserrat font-medium text-3xl mt-5 mx-5 mb-24 lg:text-5xl lg:ml-52">Nasze <span class="font-inter italic">projekty</span></h2>
             </header>
             <div>
-                <div class="grid z-0">
-                    <div class="grid-item mb-3"><img src="image/projects/Photo (3).png"></div>
-                    <div class="grid-item mb-3"><img src="image/projects/Photo (4).png"></div>
-                    <div class="grid-item mb-3"><img src="image/projects/Photo (5).png"></div>
-                    <div class="grid-item mb-3"><img src="image/projects/Photo (7).png"></div>
-                    <div class="grid-item mb-3"><img src="image/projects/Photo (8).png"></div>
-                    <div class="grid-item mb-3"><img src="image/projects/Photo (6).png"></div>
-                    <div class="grid-item mb-3"><img src="image/projects/Photo (10).png"></div>
-                    <div class="grid-item mb-3"><img src="image/projects/Photo (9).png"></div>
-                    <div class="grid-item mb-3"><img src="image/projects/Photo (11).png"></div>
-                    <div id="blurDiv" class="bg-gradient-to-t from-beige absolute z-10 w-full h-full bottom-0" ></div>
+                <div class="grid z-0 gallery">
+                    <a href="image/projects/Photo (3).png" class="grid-item mb-3" data-pswp-width="1200" data-pswp-height="600"><img src="image/projects/Photo (3).png"></a>
+                    <a href="image/projects/Photo (4).png" class="grid-item mb-3" data-pswp-width="1200" data-pswp-height="600"><img src="image/projects/Photo (4).png"></a>
+                    <a href="image/projects/Photo (5).png" class="grid-item mb-3" data-pswp-width="1200" data-pswp-height="600"><img src="image/projects/Photo (5).png"></a>
+                    <a href="image/projects/Photo (7).png" class="grid-item mb-3" data-pswp-width="1200" data-pswp-height="600"><img src="image/projects/Photo (7).png"></a>
+                    <a href="image/projects/Photo (8).png" class="grid-item mb-3" data-pswp-width="1200" data-pswp-height="600"><img src="image/projects/Photo (8).png"></a>
+                    <a href="image/projects/Photo (6).png" class="grid-item mb-3" data-pswp-width="1200" data-pswp-height="600"><img src="image/projects/Photo (6).png"></a>
+                    <a href="image/projects/Photo (10).png" class="grid-item mb-3" data-pswp-width="1200" data-pswp-height="600"><img src="image/projects/Photo (10).png"></a>
+                    <a href="image/projects/Photo (9).png" class="grid-item mb-3" data-pswp-width="1200" data-pswp-height="600"><img src="image/projects/Photo (9).png"></a>
+                    <a href="image/projects/Photo (11).png" class="grid-item mb-3" data-pswp-width="1200" data-pswp-height="600"><img src="image/projects/Photo (11).png"></a>
+                    <div id="blurDiv" class="pointer-events-none bg-gradient-to-t from-beige absolute z-10 w-full h-full bottom-0" ></div>
                 </div>
                 <div class="flex flex-column mx-auto place-items-center">
                     <button id="addButton" class="flex flex-row mx-auto mt-16 mb-6 w-32 h-12 border border-black rounded-full text-base place-content-center pt-3">Rozwiń <img class="w-4 h-4 pl-1 mt-1" src="Icons/VectorBlack.png" alt="strzałka"></button>
@@ -134,7 +148,7 @@
                 <section class="flex flex-col bg-green pl-5 w-80 lg:flex-row lg:w-[800px] xl:w-[1040px] lg:px-20 xl:px-[110px]">
                     <div class="text-light-beige text-4xl mt-5 mb-5 lg:mt-[120px] lg:mb-[120px] lg:mr-8 xl:mr-[64px] lg:text-[40px]">
                         <p class="font-montserrat">Zostańmy w kontakcie!</p>
-                        <p class="font-montserrat">Znajdziesz nas na <i class="font-interItal">Instagramie.</i></p>
+                        <p class="font-montserrat">Znajdziesz nas na <i class="font-inter italic">Instagramie.</i></p>
                     </div>
                     <div class="w-min">
                         <p class="text-base w-[170px] text-light-beige mb-5 mt-5 lg:mt-[120px] lg:mx-0 lg:mb-0">Śledź nasze najnowsze realizacje!</p>
@@ -182,8 +196,13 @@
 
     </div>
     <script src="nav.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
     <script src="mansory.js"></script>
     <script src="realization.js"></script>
     <script src="slider.js"></script>
+    <script src="./photoswipe.umd.min.js"></script>
+    <script src="./photoswipe-lightbox.umd.min.js"></script>
+    <script src="gallery.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 </html>

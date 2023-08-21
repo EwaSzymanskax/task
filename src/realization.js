@@ -14,7 +14,7 @@ const addProjects=()=> {
   const elems = [];
   const fragment = document.createDocumentFragment();
   for ( let i = 0; i < 3; i++ ) {
-    let elem = getItemElement();
+    let elem = getItemElement(i);
     fragment.appendChild( elem );
     elems.push( elem );
   }
@@ -25,7 +25,9 @@ const addProjects=()=> {
   msnry.layout();
 
   }
-  function getItemElement() {
+const imgArr= ["image/projects/Photo (10).png", "image/projects/Photo (7).png", "image/projects/Photo (3).png"]
+
+  function getItemElement(i) {
     const elem = document.createElement('div');
     elem.classList.add("grid-item");
     elem.classList.add("test");
@@ -33,7 +35,7 @@ const addProjects=()=> {
     addButton.style.display = 'none';
 
     const img= document.createElement('img');
-    img.src= "image/projects/Photo (10).png";
+    img.src= imgArr[i]
     elem.appendChild(img);
  
 
